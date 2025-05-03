@@ -1,4 +1,14 @@
-from BOGO_3_1.BOGO_3_1_config import L
+ROBOT_NAME = "BOGOBOT 4"
+
+if ROBOT_NAME == "BOGOBOT 3.1":
+    from BOGO_3_1.BOGO_3_1_config import L
+
+if ROBOT_NAME == "BOGOBOT 3.2":
+    from BOGO_3_2.BOGO_3_2_config import L
+
+if ROBOT_NAME == "BOGOBOT 4":
+    from BOGO_4.BOGO_4_config import L
+
 from math import *
 
 def IK_robot (pts, legs, arms):

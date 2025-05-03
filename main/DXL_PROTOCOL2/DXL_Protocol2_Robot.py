@@ -14,9 +14,13 @@ class ROBOT_P2(DXL_P2):
             from BOGO_3_2.BOGO_3_2_positions import offsets
             from BOGO_3_2.BOGO_3_2_config import motorConfig, numberOfMotors
 
+        if ROBOT_NAME == "BOGOBOT 4":
+            from BOGO_4.BOGO_4_positions import offsets
+            from BOGO_4.BOGO_4_config import motorConfig, numberOfMotors
+
         if ROBOT_NAME == "TEST ROBOT":
             from TEST_robot_pos_conf import offsets, motorConfig, numberOfMotors
-        
+         
         self.motors = motorConfig
         self.nMotors = numberOfMotors
         self.offsets = offsets

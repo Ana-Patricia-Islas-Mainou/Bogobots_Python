@@ -3,10 +3,13 @@ from HUMANOID.Humanoid_Walking_Algorithms import *
 class HUMANOID_ROBOT(HUMANOID_WALKING_AlGORIRTHMS):
     def __init__(self, ROBOT_NAME):
         if ROBOT_NAME == "BOGOBOT 3.1":
-            from BOGO_3_1.BOGO_3_1_positions import standPos_Pose, standPos_QVals, sitPos_QVals
+            from BOGO_3_1.BOGO_3_1_positions import  offsets, standPos_Pose, standPos_QVals, sitPos_QVals
 
         if ROBOT_NAME == "BOGOBOT 3.2":
             from BOGO_3_2.BOGO_3_2_positions import offsets, standPos_Pose, standPos_QVals, sitPos_QVals
+
+        if ROBOT_NAME == "BOGOBOT 4":
+            from BOGO_4.BOGO_4_positions import  offsets, standPos_Pose, standPos_QVals, sitPos_QVals
         super().__init__(ROBOT_NAME)
 
         self.offsets = offsets
@@ -15,7 +18,7 @@ class HUMANOID_ROBOT(HUMANOID_WALKING_AlGORIRTHMS):
         self.sitPos_QVals = sitPos_QVals
             
     def standFormSitting(self):
-        self.setMotorsTorque(1)
+        #self.setMotorsTorque(1)
         self.moveLegsByPose(self.standPos_Pose, self.standPos_QVals)
 
     def stopRobot(self):
@@ -23,11 +26,11 @@ class HUMANOID_ROBOT(HUMANOID_WALKING_AlGORIRTHMS):
         self.setMotorsTorque(0)
 
     def configPose(self):
-        self.setMotorsTorque(1)
+        #self.setMotorsTorque(1)
         self.moveRobotByQVals(self.offsets)
 
     def oneTimeAlgorithm(self, algorithm):
-        self.setMotorsTorque(1)
+        #self.setMotorsTorque(1)
         nSteps = len(algorithm)
         for step in range(0,nSteps):
             self.moveRobotByQVals(algorithm[step])

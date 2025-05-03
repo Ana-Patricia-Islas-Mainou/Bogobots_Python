@@ -20,8 +20,15 @@ Vx = 1.0 # linear.x
 Vy = 0.0 # linear.y
 
 startCom()
-robot.configPose()
 robot.setMotorsTorque(1)
+robot.moveRobotByQVals(sitPos_QVals)
+robot.standFormSitting()
+robot.moveRobotByQVals(sitPos_QVals)
+
+#robot.getMotorsPosition()
+#print(robot.q0)
+
+#robot.moveRobotByQVals(standPos_QVals)
 #robot.oneTimeAlgorithm(poses_pararse_boca_abajo)
 #robot.standFormSitting()
 #robot.moveWith_cmd_vel(Wz, Vx, Vy)

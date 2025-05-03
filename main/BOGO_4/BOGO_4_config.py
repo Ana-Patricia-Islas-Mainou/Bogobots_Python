@@ -1,4 +1,4 @@
-# BOGOBOT 3.2 CONFIGURE PAGE
+# BOGOBOT 4 CONFIGURE PAGE
 
 from DXL_PROTOCOL2.DXL_Protocol2_Functions import *
 
