@@ -27,7 +27,7 @@ class HUMANOID_MOVEMENT(ROBOT_P2):
         legOffsets = self.offsets[6:18]
         qf = basePos[0:6] + self.qValsToBits(qIK,legOffsets)
         qf.append(pts[-2])
-        qf.append(+ pts[-1])
+        qf.append(pts[-1])
         self.moveRobotByQVals(qf)
 
     def moveRobotByJacobian(self):

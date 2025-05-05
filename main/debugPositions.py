@@ -1,13 +1,13 @@
 ROBOT_NAME = "BOGOBOT 3.2"
 
-# if ROBOT_NAME == "BOGOBOT 3.1":
-#     from BOGO_3_1.BOGO_3_1_positions import *
+if ROBOT_NAME == "BOGOBOT 3.1":
+     from BOGO_3_1.BOGO_3_1_positions import *
 
 if ROBOT_NAME == "BOGOBOT 3.2":
     from BOGO_3_2.BOGO_3_2_positions import *
 
-# if ROBOT_NAME == "BOGOBOT 4":
-#     from BOGO_4.BOGO_4_positions import *
+if ROBOT_NAME == "BOGOBOT 4":
+     from BOGO_4.BOGO_4_positions import *
 
 from Humanoid_Robot import *
 
@@ -20,7 +20,9 @@ startCom()
 robot.setMotorsTorque(1)
 #robot.moveRobotByQVals(offsets)
 while True:
-    opt = input("u -> up, e -> exit, t -> torque, g -> get, a -> algorithm: ").lower().strip()
+    opt = input("u -> up, e -> exit, t -> torque, g -> get, a -> algorithm, o -> offsets ").lower().strip()
+    if opt == "o":
+        robot.moveRobotByQVals(offsets)
     if opt == "u":
         robot.moveRobotByQVals(sitPos_QVals)
         robot.standFormSitting()
@@ -34,6 +36,10 @@ while True:
     if opt == "g":
         robot.getMotorsPosition()
         print(robot.q0)
+    
+    if opt == "w":
+        robot.moveWith_cmd_vel(0,0.5,0)
+
     if opt == "a":
         for i in range(0,5):
             robot.moveRobotByQVals(portero1_QVals)

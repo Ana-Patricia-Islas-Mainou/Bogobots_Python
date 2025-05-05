@@ -14,6 +14,7 @@ class HUMANOID_WALKING_AlGORIRTHMS(HUMANOID_MOVEMENT):
             #print("------------- inicio ciclo -----------")
             while (t < stop):
                 pts = cartModel(Xzmp,yzmp,radio,giro,t,dt,tf,stop,i,step)
+                print(pts)
                 #print(pts)
                 self.moveLegsByPose(pts,basePos)
                 # moveRobot_byPose(portHandler,packetHandler,groupSyncWritePos,groupSyncWriteVel,IDs,walk_TaskS)

@@ -23,6 +23,7 @@ startCom()
 robot.setMotorsTorque(1)
 robot.moveRobotByQVals(sitPos_QVals)
 robot.standFormSitting()
+time.sleep(5)
 robot.moveRobotByQVals(sitPos_QVals)
 
 #robot.getMotorsPosition()
