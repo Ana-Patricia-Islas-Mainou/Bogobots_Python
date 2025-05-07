@@ -1,4 +1,4 @@
-ROBOT_NAME = "BOGOBOT 3.2"
+ROBOT_NAME = "BOGOBOT 4"
 
 if ROBOT_NAME == "BOGOBOT 3.1":
      from BOGO_3_1.BOGO_3_1_positions import *
@@ -24,8 +24,8 @@ while True:
     if opt == "o":
         robot.moveRobotByQVals(offsets)
     if opt == "u":
-        robot.moveRobotByQVals(sitPos_QVals)
         robot.standFormSitting()
+        #robot.standFormSitting()
     if opt == "e":
         robot.moveRobotByQVals(sitPos_QVals)
         break
@@ -41,9 +41,10 @@ while True:
         robot.moveWith_cmd_vel(0,0.5,0)
 
     if opt == "a":
-        for i in range(0,5):
+        for i in range(0,1):
             robot.moveRobotByQVals(portero1_QVals)
             robot.moveRobotByQVals(portero2_QVals)
+            robot.moveRobotByQVals(portero3_QVals)
         """ 
         robot.moveRobotByQVals(portero1_QVals)
         robot.moveRobotByQVals(porteroTapa1_QVals)

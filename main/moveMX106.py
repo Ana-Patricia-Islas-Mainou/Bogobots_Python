@@ -20,13 +20,14 @@ Vx = 1.0 # linear.x
 Vy = 0.0 # linear.y
 
 startCom()
-robot.configPose()
 robot.setMotorsTorque(1)
+robot.standFormSitting()
+#robot.configPose()
 #robot.oneTimeAlgorithm(poses_pararse_boca_abajo)
 #robot.standFormSitting()
 #robot.moveWith_cmd_vel(Wz, Vx, Vy)
-#robot.stopRobot()
-time.sleep(5)
+time.sleep(15)
+robot.stopRobot()
 robot.setMotorsTorque(0)
 time.sleep(1)
 stopCom()
