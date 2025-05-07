@@ -2,7 +2,7 @@
 BAUDRATE                    = 2000000
 PROTOCOL_VERSION            = 2.0
 DEVICENAME                  = 'COM7'
-DEVICENAME                  = "/dev/ttyUSB0" #'COM8'
+#DEVICENAME                  = "/dev/ttyUSB0" #'COM8'
 
 # CONTROL TABLE
 ADDR_TORQUE_ENABLE          = 64
