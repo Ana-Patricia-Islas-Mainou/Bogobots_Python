@@ -42,9 +42,9 @@ while True:
 
     if opt == "a":
         for i in range(0,1):
-            robot.moveRobotByQVals(portero1_QVals)
-            robot.moveRobotByQVals(portero2_QVals)
-            robot.moveRobotByQVals(portero3_QVals)
+            #robot.mo(portero1_QVals)
+            robot.moveRobotByQVals(porteroBien_QVals)
+            #robot.moveRobotByQVals(portero3_QVals)
         """ 
         robot.moveRobotByQVals(portero1_QVals)
         robot.moveRobotByQVals(porteroTapa1_QVals)
